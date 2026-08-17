@@ -44,13 +44,27 @@ body {
 /* HERO */
 .hero {
   background: #161D26;
+  background-image: url('Standard JPG-GettyImages-1032683612.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
   padding: 72px 24px 64px;
   text-align: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(22, 29, 38, 0.72);
 }
 
 .hero-inner {
   max-width: 680px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .wordmark {
@@ -480,3 +494,4 @@ body {
 
 </body>
 </html>
+
