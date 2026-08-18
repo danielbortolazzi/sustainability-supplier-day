@@ -15,6 +15,503 @@
     <h1 class="hero-title">Brazil Sustainability<br>Supplier Day</h1>
     <div class="hero-meta">
       <span class="meta-pill">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        1º de outubro de 2026
+      </span>
+      <span class="meta-pill">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+        13h – 17h40
+      </span>
+      <span class="meta-pill">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        São Paulo, SP
+      </span>
+    </div>
+  </div>
+</header>
+
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #F2F6F5;
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color: #161D26;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* HERO */
+.hero {
+  background: #161D26;
+  background-image: url('Standard JPG-GettyImages-1032683612.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 72px 24px 64px;
+  text-align: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(22, 29, 38, 0.72);
+}
+
+.hero-inner {
+  max-width: 680px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.wordmark {
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: #81DE99;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 0.9;
+  margin-bottom: 28px;
+}
+
+.hero-meta {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.meta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.85);
+}
+
+/* CONTAINER */
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px 64px;
+}
+
+/* SECTIONS */
+.section {
+  margin-top: 32px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.section-icon {
+  width: 36px;
+  height: 36px;
+  background: #004A3A;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.section-icon svg {
+  width: 18px;
+  height: 18px;
+  stroke: #FFFFFF;
+  fill: none;
+  stroke-width: 2;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #161D26;
+  line-height: 1;
+}
+
+/* CARD */
+.card {
+  background: #FFFFFF;
+  border: 1px solid #E5EDEB;
+  border-radius: 12px;
+  padding: 28px;
+}
+
+/* INTRO TEXT */
+.intro-text {
+  font-size: 15px;
+  color: #161D26;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.intro-highlight {
+  display: block;
+  font-weight: 700;
+  font-size: 16px;
+  color: #004A3A;
+  margin-top: 24px;
+  text-align: justify;
+}
+
+/* AGENDA */
+.agenda-row {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid #F2F6F5;
+}
+
+.agenda-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.agenda-row:first-child {
+  padding-top: 0;
+}
+
+.agenda-time {
+  font-family: 'SF Mono', 'Consolas', 'Monaco', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  color: #004A3A;
+  min-width: 48px;
+  flex-shrink: 0;
+}
+
+.agenda-session {
+  font-size: 14px;
+  font-weight: 500;
+  color: #161D26;
+}
+
+.agenda-break {
+  background: #F2F6F5;
+  margin: 0 -28px;
+  padding: 10px 28px;
+  border-bottom: none;
+  border-radius: 4px;
+}
+
+.agenda-break .agenda-session {
+  color: #004A3A;
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* LOCATION */
+.location-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #D5F0D8;
+  border: 1px solid #81DE99;
+  border-radius: 10px;
+  padding: 24px;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s ease;
+}
+
+.location-card:hover {
+  background: #c4ebc8;
+}
+
+.location-pin {
+  width: 48px;
+  height: 48px;
+  background: #004A3A;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.location-pin svg {
+  width: 22px;
+  height: 22px;
+  fill: #FFFFFF;
+}
+
+.location-info h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #161D26;
+  margin-bottom: 4px;
+}
+
+.location-info p {
+  font-size: 14px;
+  color: #004A3A;
+  margin-bottom: 6px;
+}
+
+.location-cta {
+  font-size: 13px;
+  font-weight: 700;
+  color: #004A3A;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* REGISTRATION */
+.registration-intro {
+  font-size: 15px;
+  color: #161D26;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.cta-wrapper {
+  text-align: center;
+}
+
+.btn-cta {
+  display: inline-block;
+  background: #004A3A;
+  color: #FFFFFF;
+  padding: 14px 32px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+
+.btn-cta:hover {
+  background: #003029;
+}
+
+/* FOOTER */
+.footer {
+  background: #161D26;
+  padding: 36px 24px;
+  text-align: center;
+}
+
+.footer-wordmark {
+  font-size: 14px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 4px;
+}
+
+.footer-sub {
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+}
+
+/* ANIMATIONS */
+.section { opacity: 1; }
+@media (prefers-reduced-motion: no-preference) {
+  .section {
+    animation: fadeUp 0.5s ease-out both;
+  }
+  .section:nth-of-type(2) { animation-delay: 0.05s; }
+  .section:nth-of-type(3) { animation-delay: 0.1s; }
+  .section:nth-of-type(4) { animation-delay: 0.15s; }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: none; }
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .hero { padding: 48px 20px 40px; }
+  .hero-title { font-size: 30px; }
+  .meta-pill { font-size: 12px; padding: 6px 12px; }
+  .card { padding: 20px; }
+  .agenda-break { margin: 0 -20px; padding: 10px 20px; }
+  .location-card { flex-direction: column; text-align: center; }
+}
+</style>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+  <!-- SOBRE O EVENTO -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      </div>
+      <h2 class="section-title">Sobre o evento</h2>
+    </div>
+    <div class="card">
+      <p class="intro-text">
+        Convidamos você a dedicar uma tarde conosco para fortalecer o que já estamos construindo juntos. Este é um espaço para trocar ideias, ouvir perspectivas de quem está na linha de frente da descarbonização e sair com conexões e inspiração para o próximo passo. O evento reúne painéis interativos, apresentações de especialistas e momentos de networking entre parceiros que compartilham o mesmo propósito.
+      </p>
+      <p class="intro-highlight">
+        Sustentabilidade se constrói em parceria. Venha fazer parte dessa conversa.
+      </p>
+    </div>
+  </div>
+
+  <!-- INSCRIÇÃO -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">
+        <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+      </div>
+      <h2 class="section-title">Inscrição</h2>
+    </div>
+    <div class="card">
+      <p class="registration-intro">
+        Garanta sua participação preenchendo o formulário de inscrição. Vagas limitadas.
+      </p>
+      <div class="cta-wrapper">
+        <a class="btn-cta" href="https://amazonexteu.qualtrics.com/jfe/form/SV_eXVZ0QV3pXNg8my" target="_blank">Fazer inscrição</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- AGENDA -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">
+        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      </div>
+      <h2 class="section-title">Agenda</h2>
+    </div>
+    <div class="card">
+
+      <div class="agenda-row agenda-break">
+        <span class="agenda-time">13:00</span>
+        <span class="agenda-session">Recepção e coffee</span>
+      </div>
+
+      <div class="agenda-row">
+        <span class="agenda-time">14:00</span>
+        <span class="agenda-session">Kick off – Welcome speech</span>
+      </div>
+
+      <div class="agenda-row">
+        <span class="agenda-time">14:10</span>
+        <span class="agenda-session">Sustainability at Amazon: perspectiva global e expectativas para fornecedores</span>
+      </div>
+
+      <div class="agenda-row">
+        <span class="agenda-time">14:25</span>
+        <span class="agenda-session">Sustentabilidade na Amazon Brasil</span>
+      </div>
+
+      <div class="agenda-row">
+        <span class="agenda-time">14:35</span>
+        <span class="agenda-session">Supplier pulse check – sessão interativa</span>
+      </div>
+
+      <div class="agenda-row">
+        <span class="agenda-time">14:45</span>
+        <span class="agenda-session">Painel de fornecedores, moderado pela Amazon</span>
+      </div>
+
+      <div class="agenda-row">
+        <span class="agenda-time">15:25</span>
+        <span class="agenda-session">TCP update com signatários</span>
+      </div>
+
+      <div class="agenda-row agenda-break">
+        <span class="agenda-time">15:40</span>
+        <span class="agenda-session">Networking break</span>
+      </div>
+
+      <div class="agenda-row">
+        <span class="agenda-time">16:10</span>
+        <span class="agenda-session">ASX: CFE pathways</span>
+      </div>
+
+      <div class="agenda-row">
+        <span class="agenda-time">16:25</span>
+        <span class="agenda-session">Apresentação externa: EACs, book and claim</span>
+      </div>
+
+      <div class="agenda-row">
+        <span class="agenda-time">16:55</span>
+        <span class="agenda-session">Apresentação externa: carbon reporting</span>
+      </div>
+
+      <div class="agenda-row">
+        <span class="agenda-time">17:25</span>
+        <span class="agenda-session">Encerramento</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- LOCALIZAÇÃO -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <h2 class="section-title">Localização</h2>
+    </div>
+    <a class="location-card" href="https://maps.app.goo.gl/iXNxCjBXbN1wAmRj6" target="_blank" rel="noopener">
+      <div class="location-pin">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      </div>
+      <div class="location-info">
+        <h3>Blue Tree Premium Faria Lima</h3>
+        <p>Av. Brig. Faria Lima, 3989 – Itaim Bibi, São Paulo, SP</p>
+        <span class="location-cta">Ver no Google Maps →</span>
+      </div>
+    </a>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p class="footer-wordmark">Amazon Sustainability</p>
+  <p class="footer-sub">© 2026 Amazon.com, Inc. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brazil Sustainability Supplier Day</title>
+</head>
+<body>
+
+<!-- HERO HEADER -->
+<header class="hero">
+  <div class="hero-inner">
+    <p class="wordmark">Amazon Sustainability</p>
+    <h1 class="hero-title">Brazil Sustainability<br>Supplier Day</h1>
+    <div class="hero-meta">
+      <span class="meta-pill">
         <svg width="16" height="16" viewBox="[PIN]" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
         1º de outubro de 2026
       </span>
